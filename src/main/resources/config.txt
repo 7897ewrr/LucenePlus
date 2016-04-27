@@ -1,0 +1,34 @@
+### basic parameters ###
+queryFilePath=src/main/resources/queries.txt
+indexPath=index
+trecEvalOutputPath=src/main/resources/output.txt
+retrievalAlgorithm=Indri
+BM25:k_1=0.1
+BM25:b=0.2
+BM25:k_3=0.5
+Indri:mu=1
+Indri:lambda=0.5
+
+
+### parameters for query expansion from feedback ###
+fb=false
+fbDocs=10
+fbTerms=10
+fbMu=0
+fbOrigWeight=0.5
+#fbInitialRankingFile=
+fbExpansionQueryFile=src/main/resources/outputnewqueries.txt
+
+
+### parameters for LearnToRank ###
+letor:trainingQueryFile=src/main/resources/learntorank/trainingqueries.txt
+letor:trainingQrelsFile=src/main/resources/learntorank/jedge.txt
+letor:featureDisable=null
+letor:trainingFeatureVectorsFile=src/main/resources/learntorank/trainingvectors.txt
+letor:pageRankFile=src/main/resources/learntorank/pagerank.txt
+letor:testingFeatureVectorsFile=src/main/resources/learntorank/testvectors.txt
+letor:testingDocumentScores=src/main/resources/learntorank/predict.dat
+letor:svmRankLearnPath=src/main/resources/learntorank/svm_rank/svm_rank_learn
+letor:svmRankParamC=0.001
+letor:svmRankModelFile=src/main/resources/learntorank/model.dat
+letor:svmRankClassifyPath=src/main/resources/learntorank/svm_rank/svm_rank_classify
